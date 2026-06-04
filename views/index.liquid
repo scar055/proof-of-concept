@@ -1,1 +1,29 @@
 {% render 'partials/header.liquid', title: 'mijn score' %}
+    <main>
+        <section>
+            <h1>{{ golfer.handicap }}</h1>
+        </section>
+        <section>
+            <article>
+                <img src="" alt="grafiek">
+            </article>
+            <article>
+                <ul>
+                {% for score in scores %}
+                  <li>{{score.differential}}</li>
+                {% endfor %}
+                </ul>
+            </article>
+        </section>
+        <section>
+            <p>volgende handicap section</p>
+        </section>
+        <section>
+            <p>ranking section</p>
+        </section>
+        <section>
+            <p>mijlpalen section</p>
+        </section>
+    </main>
+</body>
+</html>
