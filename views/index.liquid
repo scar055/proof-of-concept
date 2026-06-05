@@ -23,6 +23,9 @@
         </section>
         <section>
             <p>mijlpalen section</p>
+            {% for milestone in milestones %}
+                {{milestone.title}}
+            {% endfor %}
         </section>
     </main>
 </body>
