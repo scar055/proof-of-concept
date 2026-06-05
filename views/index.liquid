@@ -20,6 +20,9 @@
         </section>
         <section>
             <p>ranking section</p>
+            {% for ranking in rankings %}
+                {{ranking.category}}
+            {% endfor %}
         </section>
         <section>
             <p>mijlpalen section</p>
