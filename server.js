@@ -13,27 +13,32 @@ app.engine("liquid", engine.express());
 
 app.set("views", "./views");
 
-const golfers = "https://fdnd-agency.directus.app/items/into_golf_golfers";
+const baseUrl = "https://fdnd-agency.directus.app/items/into_";
 
-const handicapHistory =
-  "https://fdnd-agency.directus.app/items/into_golf_handicap_history";
+const golfers = "golf_golfers";
 
-const milestones =
-  "https://fdnd-agency.directus.app/items/into_golf_milestones";
+const rounds = "golf_rounds";
 
-const monthlyRanking =
-  "https://fdnd-agency.directus.app/items/into_golf_monthly_ranking";
+const handicapHistory = "golf_handicap_history";
+
+const milestones = "golf_milestones";
+
+const monthlyRanking = "golf_monthly_ranking";
 
 app.get("/", async function (request, response) {
-  const golfer = await fetch(golfers + "/1");
+  const golfer = await fetch(baseUrl + golfers + "/1");
 
   const scores = await fetch(
-    "https://fdnd-agency.directus.app/items/into_golf_rounds?filter[golfer_id][_eq]=1&sort=-date&limit=5",
+    baseUrl + rounds + "?filter[golfer_id][_eq]=1&sort=-date&limit=5",
   );
 
-  const rankings = await fetch(monthlyRanking + "?filter[golfer_id][_eq]=1");
+  const rankings = await fetch(
+    baseUrl + monthlyRanking + "?filter[golfer_id][_eq]=1",
+  );
 
-  const milestone = await fetch(milestones + "?filter[golfer_id][_eq]=1");
+  const milestone = await fetch(
+    baseUrl + milestones + "?filter[golfer_id][_eq]=1",
+  );
 
   const golferJson = await golfer.json();
 
