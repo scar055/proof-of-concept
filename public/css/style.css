@@ -1,0 +1,8 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: auto;
+    margin-block: 1em;
+    max-width: 1000px;
+}
