@@ -1,6 +1,7 @@
 {% render 'partials/header.liquid', title: 'mijn score' %}
     <main>
-        <section>
+        <section class="main-score">
+            <p>whs</p>
             <h1>{{ golfer.handicap | round: 1}}</h1>
             <p>{{ golfer.improvement | round: 1}}</p>
             <p> 
@@ -38,6 +39,12 @@
                 </ul>
             </article>
         </section>
+        <form>
+            <input type="date" name="date">
+            <input type="text" name="course">
+            <input type="number" name="score">
+            <input type="checkbox" name="">
+        </form>
         {% comment %} <section>
             <p>volgende handicap section</p>
         </section>

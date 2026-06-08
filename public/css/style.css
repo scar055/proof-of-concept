@@ -1,8 +1,43 @@
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: var(--space-md);
+
+    button {
+        background: none;
+        border: none;
+    }
+}
+
+main {
     margin-inline: auto;
-    margin-block: 1em;
-    max-width: 1000px;
+    background-color: var(--secondary-background);
+
+    section {
+        margin-block: var(--space-xl);
+        padding-inline: var(--space-md);
+
+        article {
+            margin-block: var(--space-md);
+            background-color: var(--primary-background);
+            padding: var(--space-md);
+            border-radius: var(--space-md);
+            filter: drop-shadow(0 0 0.6rem rgba(0, 0, 0, 0.200));
+        }
+    }
+
+    .main-score {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-background);
+
+        p:nth-of-type(2) {
+            background: hsl(140, 35%, 92%);
+            color: hsl(141 39% 14%);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 10em;
+        }
+    }
 }
