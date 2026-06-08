@@ -1,7 +1,13 @@
 {% render 'partials/header.liquid', title: 'mijn score' %}
     <main>
         <section>
-            <h1>{{ golfer.handicap }}</h1>
+            <h1>{{ golfer.handicap | round: 1}}</h1>
+            <p>{{ golfer.improvement | round: 1}}</p>
+            <p> 
+                was {{ golfer.previous_handicap | round: 1}} op
+                {{ golfer.previous_date | date: "%d %b %y" }}
+             &#183; low {{ golfer.low | round: 1}}
+            </p>
         </section>
         <section>
             <article>
@@ -10,18 +16,24 @@
             <article>
                 <ul>
                 {% for score in scores %}
-                  <li>{{score.differential}}</li>
+                <li>
+                    {{ score.date | date: "%d %b %y" }}
+                    {{ score.course }}
+                    {{ score.type }}
+                    {{ score.differential | round: 1 }}
+                </li>
                 {% endfor %}
                 </ul>
             </article>
         </section>
-        <section>
+        {% comment %} <section>
             <p>volgende handicap section</p>
         </section>
         <section>
             <p>ranking section</p>
             {% for ranking in rankings %}
                 {{ranking.category}}
+                {{ ranking.rankings }}
             {% endfor %}
         </section>
         <section>
@@ -29,7 +41,7 @@
             {% for milestone in milestones %}
                 {{milestone.title}}
             {% endfor %}
-        </section>
+        </section> {% endcomment %}
     </main>
 </body>
 </html>
