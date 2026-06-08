@@ -6,6 +6,14 @@
 }
 
 html {
+    --primary-color: hsl(189, 76%, 43%);
+
+
+    --primary-background: hsl(0, 0%, 100%);
+    --secondary-background: hsl(43, 20%, 93%);
+    --triary-background: hsl(190, 78%, 22%);
+
+
     /* spacing */
     /* 0.125rem */
     --space-3xs: 2px;
@@ -26,7 +34,8 @@ html {
     /* 4rem */
     --space-3xl: 64px;
 
-
+    max-width: 1400px;
+    margin-inline: auto;
     line-height: 1.4;
 
     p {
