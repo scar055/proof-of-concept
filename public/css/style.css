@@ -57,6 +57,15 @@ main {
         }
     }
 
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-block: var(--space-md);
+        background-color: var(--primary-background);
+        padding: var(--space-md);
+        border-radius: var(--space-md);
+    }
+
     .main-score {
         display: flex;
         flex-direction: column;
