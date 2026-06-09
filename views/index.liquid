@@ -22,18 +22,18 @@
             <h2>
                 Recente rondes
             </h2>
-            <p>5 rondes</p>
             <article>
                 <h3>
                     Recente rondes
                 </h3>
+                <p>5 rondes</p>
                 <ul>
                 {% for score in scores %}
                 <li>
-                    {{ score.date | date: "%d %b %y" }}
-                    {{ score.course }}
-                    {{ score.type }}
-                    {{ score.differential | round: 1 }}
+                    <p class="round-date">{{ score.date | date: "%d %b %y" }}</p>
+                    <p class="round-course">{{ score.course }}</p>
+                    <p class="round-type">{{ score.type }}</p>
+                    <p class="round-score">{{ score.differential | round: 1 }}</p>
                 </li>
                 {% endfor %}
                 </ul>
