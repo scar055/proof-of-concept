@@ -38,9 +38,19 @@ html {
     margin-inline: auto;
     line-height: 1.4;
 
+    font-family: "sn-pro", Arial, Tahoma, Verdana, sans-serif;
+
     p {
         font-size: 16px;
     }
+}
+
+@font-face {
+    font-family: "sn-pro";
+    src: url('../assests/SN_Pro/SNPro-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
 }
 
 .visually-hidden:not(:focus):not(:active) {
