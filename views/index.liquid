@@ -1,4 +1,4 @@
-{% render 'partials/header.liquid', title: 'mijn score' %}
+{% render 'partials/header.liquid', title: 'mijn progressie' %}
     <main>
         <section class="main-score">
             <p>whs</p>
@@ -39,11 +39,24 @@
                 </ul>
             </article>
         </section>
-        <form>
-            <input type="date" name="date">
-            <input type="text" name="course">
-            <input type="number" name="score">
-            <input type="checkbox" name="">
+        <form method="POST" action="">
+            <label>
+                Datum:
+                <input type="date" name="date" placeholder="1 jan 2026">
+            </label>
+            <label>
+                Baan:
+                <input type="text" name="course">
+            </label>
+            <label>
+                Score
+                <input type="number" name="score">
+            </label>
+            <label>
+                Telt mee voor handicap
+                <input type="checkbox" name="handicap" checked>
+            </label>
+            <button>versturen</button>
         </form>
         {% comment %} <section>
             <p>volgende handicap section</p>
