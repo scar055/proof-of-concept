@@ -39,7 +39,8 @@
                 </ul>
             </article>
         </section>
-        <form method="POST" action="">
+        <form method="POST" action="/score-toevoegen">
+            <input type="hidden" name="golfer_id" value="{{ golfer.id }}">
             <label>
                 Datum:
                 <input type="date" name="date" placeholder="1 jan 2026">
@@ -54,7 +55,10 @@
             </label>
             <label>
                 Telt mee voor handicap
-                <input type="checkbox" name="handicap" checked>
+                <select name="type">
+                    <option value="QUAL">ja</option>
+                    <option value="null">nee</option>
+                </select>
             </label>
             <button>versturen</button>
         </form>

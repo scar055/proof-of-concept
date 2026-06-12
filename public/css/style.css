@@ -64,6 +64,23 @@ main {
         background-color: var(--primary-background);
         padding: var(--space-md);
         border-radius: var(--space-md);
+        margin-inline: var(--space-md);
+
+        label {
+            display: flex;
+            flex-direction: column;
+            padding-block: var(--space-md);
+
+            input[text] {
+                border: none;
+            }
+        }
+
+        button {
+            border: none;
+            background-color: hsl(191, 78%, 25%);
+            color: var(--primary-background);
+        }
     }
 
     .main-score {
