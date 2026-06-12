@@ -1,4 +1,4 @@
-import express from "express";
+import express, { json } from "express";
 
 import { Liquid } from "liquidjs";
 
@@ -78,13 +78,18 @@ app.post("/score-toevoegen", async function (request, response) {
 });
 
 app.post("/score-verwijderen", async function (request, response) {
-	const scoreUrl = await fetch(baseUrl + rounds);
+	const scoreId = request.body.score_id;
 
-	const scoreId = request.body.id;
+	console.log(scoreId);
 
-	const deleteResponse = await fetch(scoreUrl.url + scoreId, {
-		method: "DELETE",
-	});
+	const deleteResponse = await fetch(
+		`https://fdnd-agency.directus.app/items/into_golf_rounds/${scoreId}`,
+		{
+			method: "DELETE",
+		},
+	);
+
+	console.log(deleteResponse);
 
 	if (!deleteResponse.ok) {
 		response.status(500).send("Het verwijderen niet gelukt");

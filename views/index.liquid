@@ -35,7 +35,7 @@
                     <p class="round-type">{{ score.type }}</p>
                     <p class="round-score">{{ score.differential | round: 1 }}</p>
                     <form method="post" action="/score-verwijderen">
-                        <input type="hidden" value="{{ score.id }}">
+                        <input type="hidden" name="score_id" value="{{ score.id }}">
                         <button>delete</button>
                     </form>
                 </li>
