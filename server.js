@@ -77,6 +77,23 @@ app.post("/score-toevoegen", async function (request, response) {
 	response.redirect(303, "/");
 });
 
+app.post("/score-verwijderen", async function (request, response) {
+	const scoreUrl = await fetch(baseUrl + rounds);
+
+	const scoreId = request.body.id;
+
+	const deleteResponse = await fetch(scoreUrl.url + scoreId, {
+		method: "DELETE",
+	});
+
+	if (!deleteResponse.ok) {
+		response.status(500).send("Het verwijderen niet gelukt");
+		return;
+	}
+
+	response.redirect(303, "/");
+});
+
 app.set("port", process.env.PORT || 8000);
 
 app.listen(app.get("port"), function () {
