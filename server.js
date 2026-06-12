@@ -26,18 +26,18 @@ const milestones = "golf_milestones";
 const monthlyRanking = "golf_monthly_ranking";
 
 app.get("/", async function (request, response) {
-	const golfer = await fetch(baseUrl + golfers + "/1");
+	const golfer = await fetch(baseUrl + golfers + "/2");
 
 	const scores = await fetch(
-		baseUrl + rounds + "?filter[golfer_id][_eq]=1&sort=-date&limit=5",
+		baseUrl + rounds + "?filter[golfer_id][_eq]=2&sort=-date&limit=5",
 	);
 
 	const rankings = await fetch(
-		baseUrl + monthlyRanking + "?filter[golfer_id][_eq]=1",
+		baseUrl + monthlyRanking + "?filter[golfer_id][_eq]=2",
 	);
 
 	const milestone = await fetch(
-		baseUrl + milestones + "?filter[golfer_id][_eq]=1",
+		baseUrl + milestones + "?filter[golfer_id][_eq]=2",
 	);
 
 	const golferJson = await golfer.json();
@@ -57,20 +57,23 @@ app.get("/", async function (request, response) {
 });
 
 app.post("/score-toevoegen", async function (request, response) {
-	const scoreUrl = await fetch(
-		baseUrl + rounds + "?filter[golfer_id][_eq]=1&sort=-date&limit=5",
-	);
+	const scoreUrl = await fetch(baseUrl + rounds);
 
-	await fetch(scoreUrl, {
+	await fetch(scoreUrl.url, {
 		method: "POST",
 		body: JSON.stringify({
+			golfer_id: request.body.golfer_id,
 			date: request.body.date,
+			course: request.body.course,
+			differential: request.body.differential,
+			type: request.body.type,
 		}),
 
 		headers: {
 			"Content-Type": "application/json;charset=UTF-8",
 		},
 	});
+
 	response.redirect(303, "/");
 });
 
