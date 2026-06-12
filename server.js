@@ -65,7 +65,7 @@ app.post("/score-toevoegen", async function (request, response) {
 			golfer_id: request.body.golfer_id,
 			date: request.body.date,
 			course: request.body.course,
-			differential: request.body.differential,
+			differential: request.body.score,
 			type: request.body.type,
 		}),
 
