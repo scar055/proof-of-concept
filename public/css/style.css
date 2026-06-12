@@ -40,6 +40,10 @@ main {
                         grid-row: 2;
                     }
 
+                    form {
+                        grid-row: 2;
+                    }
+
                     .round-date {
                         grid-row: 1;
                     }
