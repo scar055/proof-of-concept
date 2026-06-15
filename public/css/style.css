@@ -14,7 +14,6 @@ header {
 main {
     margin-inline: auto;
 
-
     section {
         margin-block-end: var(--space-xl);
         padding-inline: var(--space-md);
@@ -79,12 +78,6 @@ main {
             input[text] {
                 border: none;
             }
-        }
-
-        button {
-            border: none;
-            background-color: hsl(191, 78%, 25%);
-            color: var(--primary-background);
         }
     }
 
