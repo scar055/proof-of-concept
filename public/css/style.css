@@ -111,7 +111,7 @@ main {
             }
 
             &:has(input[type="checkbox"]) {
-                flex-direction: row-reverse;
+                flex-direction: row;
             }
         }
     }
