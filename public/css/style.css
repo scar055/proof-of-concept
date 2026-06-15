@@ -1,8 +1,9 @@
 header {
+    background-color: var(--primary-background);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: var(--space-md);
+    padding: var(--space-md);
 
     button {
         background: none;
@@ -12,10 +13,10 @@ header {
 
 main {
     margin-inline: auto;
-    background-color: var(--secondary-background);
+
 
     section {
-        margin-block: var(--space-xl);
+        margin-block-end: var(--space-xl);
         padding-inline: var(--space-md);
 
         article {
