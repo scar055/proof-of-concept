@@ -80,16 +80,12 @@ app.post("/score-toevoegen", async function (request, response) {
 app.post("/score-verwijderen", async function (request, response) {
 	const scoreId = request.body.score_id;
 
-	console.log(scoreId);
-
 	const deleteResponse = await fetch(
 		`https://fdnd-agency.directus.app/items/into_golf_rounds/${scoreId}`,
 		{
 			method: "DELETE",
 		},
 	);
-
-	console.log(deleteResponse);
 
 	if (!deleteResponse.ok) {
 		response.status(500).send("Het verwijderen niet gelukt");
