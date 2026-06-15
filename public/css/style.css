@@ -61,14 +61,27 @@ main {
         }
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        margin-block: var(--space-md);
+    #add-score {
+        border: none;
         background-color: var(--primary-background);
         padding: var(--space-md);
         border-radius: var(--space-md);
-        margin-inline: var(--space-md);
+
+        @supports selector(popover) {
+            width: 100dvw;
+            position-area: bottom;
+
+            &:popover-open {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @supports not selector(popover) {
+            display: flex;
+            flex-direction: column;
+            margin: var(--space-md);
+        }
 
         label {
             display: flex;
@@ -78,7 +91,15 @@ main {
             input[text] {
                 border: none;
             }
+
+            &:has(input[checkbox]) {
+                flex-direction: row;
+            }
         }
+    }
+
+    ::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     .main-score {
