@@ -18,6 +18,15 @@ main {
         margin-block-end: var(--space-xl);
         padding-inline: var(--space-md);
 
+        .section-name {
+            color: var(--section-name-color);
+        }
+
+        .section-name,
+        .section-title {
+            margin-inline: var(--space-md);
+        }
+
         article {
             margin-block: var(--space-md);
             background-color: var(--primary-background);
@@ -55,6 +64,10 @@ main {
                         padding: var(--space-2xs) var(--space-xs);
                         border-radius: 10px;
 
+                    }
+
+                    .delete {
+                        margin-inline-start: var(--space-sm);
                     }
                 }
             }
