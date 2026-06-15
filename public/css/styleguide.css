@@ -8,6 +8,8 @@
 html {
     --primary-color: hsl(189, 76%, 43%);
     --section-name-color: hsl(39, 100%, 12%);
+    --backdrop-color: rgba(0, 0, 0, 0.5);
+    --border-color: hsl(205, 14%, 84%);
 
 
     --primary-background: hsl(0, 0%, 100%);

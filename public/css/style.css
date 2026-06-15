@@ -101,18 +101,23 @@ main {
             flex-direction: column;
             padding-block: var(--space-md);
 
-            input[text] {
-                border: none;
+            input[type="date"],
+            input[type="number"],
+            input[type="text"] {
+                padding: var(--space-xs);
+                border-radius: 10px;
+                border: 2px solid var(--border-color);
+
             }
 
-            &:has(input[checkbox]) {
-                flex-direction: row;
+            &:has(input[type="checkbox"]) {
+                flex-direction: row-reverse;
             }
         }
     }
 
     ::backdrop {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: var(--backdrop-color);
     }
 
     .main-score {
