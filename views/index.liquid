@@ -17,9 +17,8 @@
             </h2>
             <img src="assests/grafiek.png" width="200" height="100" alt="grafiek">
         </section>
-        <section>
-            <p>log</p>
-            <h2>
+            <p class="section-name">log</p>
+            <h2 class="section-title">
                 Recente rondes
             </h2>
             <article>
@@ -27,6 +26,7 @@
                     Recente rondes
                 </h3>
                 <p>5 rondes</p>
+                <button popovertarget="add-score" class="primary-button"> score toevoegen </button>
                 <ul>
                 {% for score in scores %}
                 <li>
@@ -36,14 +36,14 @@
                     <p class="round-score">{{ score.differential | round: 1 }}</p>
                     <form method="post" action="/score-verwijderen">
                         <input type="hidden" name="score_id" value="{{ score.id }}">
-                        <button>delete</button>
+                        <button class="primary-button delete">delete</button>
                     </form>
                 </li>
                 {% endfor %}
                 </ul>
             </article>
         </section>
-        <form method="POST" action="/score-toevoegen">
+        <form method="POST" action="/score-toevoegen" popover id="add-score">
             <input type="hidden" name="golfer_id" value="{{ golfer.id }}">
             <label>
                 Datum:
@@ -61,7 +61,7 @@
                 Telt mee voor handicap
                 <input type="checkbox" checked name="type" value="QUAL">
             </label>
-            <button>versturen</button>
+            <button class="primary-button">versturen</button>
         </form>
         {% comment %} <section>
             <p>volgende handicap section</p>
