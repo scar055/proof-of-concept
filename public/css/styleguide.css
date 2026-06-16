@@ -75,4 +75,10 @@ html {
     padding: var(--space-xs) var(--space-md);
     border-radius: 10px;
     align-self: flex-end;
+
+    &:hover {
+        color: hsl(191, 78%, 25%);
+        background-color: hsl(191, 52%, 94%);
+        transition: .2s ease-in-out;
+    }
 }
