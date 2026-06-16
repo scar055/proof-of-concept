@@ -116,6 +116,7 @@ main {
 
             &:has(input[type="checkbox"]) {
                 flex-direction: row;
+                background-color: var(--checkbox-background-color);
             }
         }
     }
@@ -131,9 +132,9 @@ main {
         background-color: var(--primary-background);
         padding-block-end: var(--space-md);
 
-        p:nth-of-type(2) {
-            background: hsl(140, 35%, 92%);
-            color: hsl(141 39% 14%);
+        p:nth-of-type(3) {
+            background: var(--checkbox-background-color);
+            color: var(--checkbox-color);
             padding: var(--space-xs) var(--space-md);
             border-radius: 10em;
         }
