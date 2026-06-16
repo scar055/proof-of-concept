@@ -22,7 +22,6 @@
                     Recente rondes
                 </h3>
                 <p>5 rondes</p>
-                <button popovertarget="add-score" class="primary-button"> score toevoegen </button>
                 <ul>
                 {% for score in scores %}
                 <li>
@@ -39,6 +38,7 @@
                 </ul>
             </article>
         </section>
+        <button popovertarget="add-score" class="primary-button open-form-button"> score toevoegen </button>
         <form method="POST" action="/score-toevoegen" popover id="add-score">
             <input type="hidden" name="golfer_id" value="{{ golfer.id }}">
             <label>
