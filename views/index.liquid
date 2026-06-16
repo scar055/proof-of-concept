@@ -1,15 +1,15 @@
 {% render 'partials/header.liquid', title: 'mijn progressie' %}
     <main>
-        <section class="main-score">
+        <div class="main-score">
             <p>whs</p>
-            <h1>{{ golfer.handicap | round: 1}}</h1>
+            <p>{{ golfer.handicap | round: 1}}</p>
             <p>{{ golfer.improvement | round: 1}}</p>
             <p> 
                 was {{ golfer.previous_handicap | round: 1}} op
                 {{ golfer.previous_date | date: "%d %b %y" }}
              &#183; low {{ golfer.low | round: 1}}
             </p>
-        </section>
+        </div>
         <section>
             <p class="section-name">log</p>
             <h2 class="section-title">
