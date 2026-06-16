@@ -5,11 +5,6 @@ header {
     align-items: center;
     padding: var(--space-md);
 
-    button {
-        background: none;
-        border: none;
-    }
-
     h1 {
         font-size: var(--space-md);
     }
