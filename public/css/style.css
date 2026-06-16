@@ -18,6 +18,25 @@ header {
 main {
     margin-inline: auto;
 
+    .main-score {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--primary-background);
+        padding-block-end: var(--space-md);
+
+        p:nth-of-type(2) {
+            font-size: var(--space-xl);
+        }
+
+        p:nth-of-type(3) {
+            background: var(--checkbox-background-color);
+            color: var(--checkbox-color);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 10em;
+        }
+    }
+
     section {
         margin-block-end: var(--space-xl);
         padding-inline: var(--space-md);
@@ -123,20 +142,5 @@ main {
 
     ::backdrop {
         background-color: var(--backdrop-color);
-    }
-
-    .main-score {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--primary-background);
-        padding-block-end: var(--space-md);
-
-        p:nth-of-type(3) {
-            background: var(--checkbox-background-color);
-            color: var(--checkbox-color);
-            padding: var(--space-xs) var(--space-md);
-            border-radius: 10em;
-        }
     }
 }
