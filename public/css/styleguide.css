@@ -10,6 +10,8 @@ html {
     --section-name-color: hsl(39, 100%, 12%);
     --backdrop-color: rgba(0, 0, 0, 0.5);
     --border-color: hsl(205, 14%, 84%);
+    --checkbox-color: hsl(141 39% 14%);
+    --checkbox-background-color: hsl(140, 35%, 92%);
 
 
     --primary-background: hsl(0, 0%, 100%);
