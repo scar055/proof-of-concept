@@ -9,6 +9,10 @@ header {
         background: none;
         border: none;
     }
+
+    h1 {
+        font-size: var(--space-md);
+    }
 }
 
 main {
