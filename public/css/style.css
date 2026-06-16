@@ -92,6 +92,12 @@ main {
         }
     }
 
+    @supports not selector(popover) {
+        button[popovertarget] {
+            display: none;
+        }
+    }
+
     #add-score {
         border: none;
         background-color: var(--primary-background);
