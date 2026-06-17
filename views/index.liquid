@@ -43,7 +43,7 @@
             <input type="hidden" name="golfer_id" value="{{ golfer.id }}">
             <label>
                 Datum:
-                <input type="date" name="date" value="{{ 'today' | date: '%Y-%m-%d' }}">
+                <input type="date" name="date" max="{{ 'today' | date: '%Y-%m-%d' }}" value="{{ 'today' | date: '%Y-%m-%d' }}">
             </label>
             <label>
                 Baan:
