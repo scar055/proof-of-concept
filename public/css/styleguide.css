@@ -68,6 +68,20 @@ html {
     width: 1px;
 }
 
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .primary-button {
     border: none;
     background-color: hsl(191, 78%, 25%);
@@ -80,5 +94,14 @@ html {
         color: hsl(191, 78%, 25%);
         background-color: hsl(191, 52%, 94%);
         transition: .2s ease-in-out;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        &:active {
+            animation-name: bounce;
+            animation-duration: .2s;
+            animation-timing-function: ease-in-out;
+
+        }
     }
 }
