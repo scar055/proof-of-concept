@@ -34,15 +34,43 @@ https://proof-of-concept-qv5t.onrender.com/
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+als golfer wil ik een ronde kunnen bekijken, toevoegen en verwijderen.
+
+https://github.com/user-attachments/assets/8bd9227e-50cd-49d4-901d-74659d959ac7
+
+
+
 
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
+de ronde toevoegen knop heb ik verplaast vergeleken het originele design
+
+origineel ontwerp:
+
+https://github.com/user-attachments/assets/b1d7fc41-4ec6-4589-8aff-a8ca10626c75
+
+
+mijn ontwerp:
+
+https://github.com/user-attachments/assets/71cb0f12-628a-4734-b267-4456dd9b6231
+
+de rede dat ik dit heb gedaan is als je op de telefoon op de golf baan bent denk ik dat je het liefst zo snel mogelijk een score wil toevoegen.
+
+ook is de hooft score naar het midden verplaatst omdat mensen op telefoon meestal in het midden kijkt en dan valt het nummer snel op.
+
+
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+- clone repository
+- typ in je console:
+- npm install
+- npm start
+- ga naar localhost:8000
 
 ## Bronnen
+
 
 ## Licentie
 
