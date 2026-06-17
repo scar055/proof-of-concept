@@ -41,8 +41,14 @@ https://proof-of-concept-qv5t.onrender.com/
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+clone repository
+typ in je console:
+npm install
+npm start
+ga naar localhost:8000
 
 ## Bronnen
+
 
 ## Licentie
 
