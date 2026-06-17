@@ -10,6 +10,16 @@ header {
     }
 }
 
+@keyframes swoosh {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
 main {
     margin-inline: auto;
 
@@ -118,6 +128,12 @@ main {
             &:popover-open {
                 display: flex;
                 flex-direction: column;
+
+                @media (prefers-reduced-motion: no-preference) {
+                    animation-name: swoosh;
+                    animation-duration: .2s;
+                    animation-timing-function: ease-in-out;
+                }
             }
         }
 
