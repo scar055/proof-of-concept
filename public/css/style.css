@@ -45,6 +45,8 @@ main {
     section {
         margin-block-end: var(--space-xl);
         padding-inline: var(--space-md);
+        margin-inline: auto;
+        max-width: 45em;
 
         hgroup {
             margin-inline: var(--space-md);

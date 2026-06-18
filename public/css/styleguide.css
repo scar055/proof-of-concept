@@ -39,7 +39,6 @@ html {
     /* 4rem */
     --space-3xl: 64px;
 
-    max-width: 1400px;
     background-color: var(--secondary-background);
     margin-inline: auto;
     line-height: 1.4;
