@@ -22,7 +22,8 @@
                     Recente rondes
                 </h3>
                 <p>5 rondes</p>
-                <ul>
+                <p class="not-visible">ronde toegevoegd</p>
+                <ul id="score">
                 {% for score in scores %}
                 <li>
                     <p class="round-date">{{ score.date | date: "%d %b %y" }}</p>
